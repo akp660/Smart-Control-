@@ -1,97 +1,86 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# SmartControl - Premium Hub for Home Automation
 
-# Getting Started
+[![React Native](https://img.shields.io/badge/React_Native-v0.84.1-61DAFB?logo=react&logoColor=black)](https://reactnative.dev/)
+[![Lucide Icons](https://img.shields.io/badge/Icons-Lucide-FF69B4)](https://lucide.dev/guide/packages/lucide-react-native)
+[![Plateform](https://img.shields.io/badge/Platform-iOS_%7C_Android-blue)](#)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+SmartControl is a high-fidelity, modern Smart Home management application built with React Native. It features a stunning **Glassmorphism** design system, real-time geolocation weather tracking, and modular control systems for lighting and entertainment devices.
 
-## Step 1: Start Metro
+## ✨ Key Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 🕒 Intelligent Dashboard
+- **Time-Aware Greetings**: Dynamic greeting header (Morning, Afternoon, Evening) that changes based on your local time.
+- **Minimalist Design**: Clean, dark-mode-first aesthetic using a custom glass-overlay design system.
+- **Smart Transitions**: Smooth transitions between room-specific devices and global controls.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### 🌤️ Hyper-Local Weather
+- **Live GPS Integration**: Uses `@react-native-community/geolocation` to fetch your precise coordinates.
+- **Open-Meteo API**: Real-time temperature and condition-accurate weather icons (Sunny, Rainy, Snowy, etc.).
+- **Smart Fallback**: Instant-on placeholder values while GPS is acquiring, ensuring zero UI lag.
 
-```sh
-# Using npm
-npm start
+### 💡 Smart Lighting System
+- **Presets Integration**: Quick-toggle scenes like *Relax*, *Vibrant*, *Reading*, and *Night*.
+- **Precision Control**: Interactive brightness sliders and color temperature management.
+- **Advanced Settings**: Dedicated screen for automated schedules, motion sensors, and security toggles.
 
-# OR using Yarn
-yarn start
-```
+### 📺 Entertainment Hub (Apple TV-Style)
+- **Unified Remote**: A high-fidelity TV remote inspired by modern minimalist designs.
+- **Haptic Interaction**: Visual feedback via a "Blinking LED" indicator when buttons are pressed.
+- **Volume & Power**: Dedicated control screen for quick adjustments and status toggles.
 
-## Step 2: Build and run your app
+## 🛠️ Tech Stack
+- **Framework**: React Native (CLI)
+- **Navigation**: React Navigation 7
+- **Icons**: Lucide React Native
+- **Styling**: Vanilla StyleSheet (Custom Glassmorphism Tokens)
+- **Geolocation**: `@react-native-community/geolocation`
+- **Data Source**: Open-Meteo REST API
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## 🚀 Getting Started
 
-### Android
+### Prerequisites
+- [Node.js](https://nodejs.org/) (>= 22.11.0)
+- [React Native Development Environment](https://reactnative.dev/docs/environment-setup)
+- CocoaPods (for iOS)
 
-```sh
-# Using npm
-npm run android
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/akp660/Smart-Control-.git
+   cd SmartControl
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. (iOS Only) Install pods:
+   ```bash
+   cd ios && pod install && cd ..
+   ```
 
-# OR using Yarn
-yarn android
-```
+### Running the App
+- **Android**:
+  ```bash
+  npx react-native run-android
+  ```
+- **iOS**:
+  ```bash
+  npx react-native run-ios
+  ```
 
-### iOS
+## 🔒 Permissions
+This app requires the following permissions to function correctly:
+- **Location**: Used to fetch your current local weather conditions.
+- **Internet**: Required for syncing device states and fetching weather data.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## 🎨 Design System
+The app uses a curated `colors.ts` resource with specific tokens:
+- `glassOverlay`: Semi-transparent background for that "frosted glass" look.
+- `glassBorder`: Subtle borders focused on depth and premium feel.
+- `primary`: Vibrant accent colors for interactive states.
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
+Built with ❤️ by [akp660](https://github.com/akp660)
