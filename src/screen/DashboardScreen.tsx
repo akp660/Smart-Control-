@@ -78,10 +78,10 @@ const DashboardScreen = ({ navigation }: any) => {
         <View style={styles.headerHub}>
            <View style={styles.headerLeft}>
               <Text style={styles.greetingText}>{greeting}, Martha!</Text>
-              <View style={styles.weatherRow}>
+              {/* <View style={styles.weatherRow}>
                  <Sun color="#FCD34D" size={18} />
                  <Text style={styles.weatherText}>24°C Sunny</Text>
-              </View>
+              </View> */}
            </View>
            <View style={styles.headerRight}>
               {/* Energy display removed */}
