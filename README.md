@@ -1,3 +1,11 @@
+# Preview
+
+
+https://github.com/user-attachments/assets/71b0d482-be9c-4d3b-ada1-f2eb0137cada
+
+
+
+
 # SmartControl - Premium Hub for Home Automation
 
 [![React Native](https://img.shields.io/badge/React_Native-v0.84.1-61DAFB?logo=react&logoColor=black)](https://reactnative.dev/)
